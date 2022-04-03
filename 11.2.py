@@ -1,20 +1,17 @@
 import random
 print('=========================Task11.2=================')
-a = random.randint(1,6)
-b= random.randint(1,6)
-while True:
-    h=1
-    while h <=3:
+chances=1
+while chances <=3:
 
-        user= input('if uh want to play game press yes or no')
-        if user == 'yes':
-            pass
-        elif user == 'no':
-            break
-        print(a,b)
-        if a==b:
+        dice = [1, 2, 3, 4, 5, 6]
+        a = random.choices(dice, k=2)
+        print(a,)
+        if a[0]==a[1]:
             print('you won')
+            break
+        elif chances == 3:
+            print('You Failed!')
             break
         else:
             print('you failed')
-            h =h+1
+            h =chances+1
